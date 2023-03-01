@@ -2,14 +2,14 @@
 
 This Java application is an account management system that uses Maven for dependency management, TestNG Testcase for testing, and does not use Selenium. The application provides three main functions, including adding an account, updating an account, and viewing all accounts or a specific account by ID.
 
-## Technologies Used
+### Technologies Used
 
 * Java
 * Maven
 * TestNG
 * Netbeans IDE
 
-## Functions
+### Functions
 
 * `Add an account`: Add new Account(int id, String name, String email, and String phone).
 * `Update account`: Update account by id.
@@ -25,7 +25,7 @@ public void addAccount(Account account) {
     }
 ```
 
-## Testing
+### Testing
 
 This application using TestNG testing framework for testing. Note that these tests do not use Selenium.
 
@@ -38,10 +38,10 @@ This application using TestNG testing framework for testing. Note that these tes
     }
 ```
 
-## Contributing
+### Contributing
 
 If you find a bug or want to suggest an enhancement, please submit an issue or pull request. We welcome contributions from the community.
 
-## License
+### License
 
 Copyright © 2023 Team 3 - SWT301
