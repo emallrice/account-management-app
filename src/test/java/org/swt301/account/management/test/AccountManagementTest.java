@@ -129,5 +129,10 @@ public class AccountManagementTest {
         account1.setId(15);
         Assert.assertEquals(account1.getId(), 15);
     }
+    
+    @AfterTest
+    public void cleanup() {
+        // Code to cleanup resources after all test cases have run
+    }
 }
 
