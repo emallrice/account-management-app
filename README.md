@@ -32,7 +32,7 @@ This application using TestNG testing framework for testing. Note that these tes
 ```java testAddAccount()
 @Test
     public void testAddAccount() {
-        Account account = new Account(1, "Alice", "alice@gmail.com", "123456789");
+        Account account = new Account(1, "Alice", "alice@gmail.com", "012345678");
         accountManager.addAccount(account);
         Assert.assertEquals(accountManager.getAccountById(1), account);
     }
