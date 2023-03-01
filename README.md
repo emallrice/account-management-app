@@ -44,6 +44,4 @@ If you find a bug or want to suggest an enhancement, please submit an issue or p
 
 ## License
 
-This project is licensed under the ``MIT License``.
-
 Copyright © 2023 Team 3 - SWT301
