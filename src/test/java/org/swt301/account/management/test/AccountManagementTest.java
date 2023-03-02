@@ -23,6 +23,9 @@ public class AccountManagementTest {
         accountManager = new AccountManagement();
     }
 
+    // #Test case 1: add account
+    // call addAccount function to add account to ArrayList
+    // Expected value: Account(1, "Alice", "alice@gmail.com", "012345678")
     @Test
     public void testAddAccount() {
         Account account = new Account(1, "Alice", "alice@gmail.com", "012345678");
@@ -30,6 +33,9 @@ public class AccountManagementTest {
         Assert.assertEquals(accountManager.getAccountById(1), account);
     }
 
+    // #Test case 2: update Account
+    // call updateAccount function to update account in ArrayList
+    // Expected value: change acc.Email to "alice@yahoo.com"
     @Test
     public void testUpdateAccount() {
         Account account = accountManager.getAccountById(1);
@@ -38,7 +44,7 @@ public class AccountManagementTest {
         Assert.assertEquals(accountManager.getAccountById(1).getEmail(), "alice@yahoo.com");
     }
     
-    //test delete first account found by name in a list of accounts
+    // #Test case 3: test delete first account found by name in a list of accounts
     @Test
     public void testDeleteAccountByName() {
         Account account1 = new Account(1, "Alice", "alice@gmail.com", "012345678");
@@ -50,6 +56,9 @@ public class AccountManagementTest {
         Assert.assertEquals(accountManager.deleteAccountByName("David"), true);
     }
 
+    // #Test case 4: get account by id
+    // call getAccountById function to get account that have id 1
+    // Expected value: Account(2, "John", "john@gmail.com", "012345678")
     @Test
     public void testGetAccountById() {
         Account account = new Account(2, "John", "john@gmail.com", "012345678");
@@ -57,6 +66,9 @@ public class AccountManagementTest {
         Assert.assertEquals(accountManager.getAccountById(2), account);
     }
 
+    // Test case 5: get all accounts
+    // call getAllAccounts to display all account in arrayList
+    // Expected value: getAccounts().size() = 4
     @Test
     public void testGetAllAccounts() {
         Account account1 = new Account(3, "Mary", "mary@yahoo.com", "012345678");
@@ -68,7 +80,7 @@ public class AccountManagementTest {
     
     //test model Account
     
-    //test with null phone
+    // #Test case 6: test with null phone
     @Test
     public void testNullPhoneNumber() {
         Account account1 = new Account(1, "Alice", "alice@yahoo.com", "012345678");
@@ -76,7 +88,7 @@ public class AccountManagementTest {
         Assert.assertEquals(account1.getPhone(), "012345678");
     }  
     
-    //test phone number must be 10 degits
+    // #Test case 7: test phone number must be 10 degits
     @Test
     public void testTooLongPhoneNumber() {
         Account account1 = new Account(1, "Alice", "alice@yahoo.com", "012345678");
@@ -84,7 +96,7 @@ public class AccountManagementTest {
         Assert.assertEquals(account1.getPhone(), "012345678");
     }
     
-    //test phone have format=0xxxxxxxxx
+    // #Test case 8: test phone have format=0xxxxxxxxx
     @Test
     public void testPhoneCanNotHaveWrongFormat() {
         Account account1 = new Account(1, "Alice", "alice@yahoo.com", "012345678");
@@ -92,7 +104,7 @@ public class AccountManagementTest {
         Assert.assertEquals(account1.getPhone(), "012345678");
     }
     
-    //test email must have @gmail.com or @yahoo.com in tail
+    // #Test case 9: test email must have @gmail.com or @yahoo.com in tail
     @Test
     public void testEmailMustHaveCorrectEmailFormat() {
         Account account1 = new Account(1, "Alice", "alice@yahoo.com", "012345678");
@@ -100,7 +112,7 @@ public class AccountManagementTest {
         Assert.assertEquals(account1.getEmail(), "alice@yahoo.com");
     }
     
-    //test email can not be empty 
+    // #Test case 10: test email can not be empty 
     @Test
     public void testEmailCanNotBeEmpty() {
         Account account1 = new Account(1, "Alice", "alice@yahoo.com", "012345678");
@@ -108,7 +120,7 @@ public class AccountManagementTest {
         Assert.assertEquals(account1.getEmail(), "alice@yahoo.com");
     }
     
-    //test name can not be empty
+    // #Test case 11: test name can not be empty
     @Test
     public void testNameCanNotBeEmpty() {
         Account account1 = new Account(1, "Alice", "alice@yahoo.com", "012345678");
@@ -116,7 +128,7 @@ public class AccountManagementTest {
         Assert.assertEquals(account1.getName(), "Alice");
     }
     
-    //test name length can not have more than 100 leters
+    // #Test case 12: test name length can not have more than 100 leters
     @Test
     public void testNameCanNotTooLong() {
         Account account1 = new Account(1, "Alice", "alice@yahoo.com", "012345678");
@@ -128,7 +140,7 @@ public class AccountManagementTest {
         Assert.assertEquals(account1.getName(), "Alice");
     }
     
-    //test id can not smaller than 1 and can not bigger than 99 
+    // #Test case 13: test id can not smaller than 1 and can not bigger than 99 
     @Test
     public void testRangeOfIdNumber() {
         Account account1 = new Account(1, "Alice", "alice@yahoo.com", "012345678");
@@ -148,4 +160,3 @@ public class AccountManagementTest {
         accountManager.clearList();
     }
 }
-
