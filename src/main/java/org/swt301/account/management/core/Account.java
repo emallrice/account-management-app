@@ -15,10 +15,20 @@ public class Account {
     private String phone;
 
     public Account(int id, String name, String email, String phone) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
+        if (id>0 && id<100) {
+            this.id = id;
+        }
+        if (!name.isEmpty() && name.length()<100) {
+            this.name = name;
+        }   
+        if (email.endsWith("@gmail.com") || email.endsWith("@yahoo.com") && !email.isEmpty()) {
+            this.email = email;
+        }
+        if (phone!=null) {
+            if (phone.length()<=10 && phone.length()>0 && phone.startsWith("0")) {
+                this.phone = phone;
+            }
+        }
     }
 
     public int getId() {
@@ -26,7 +36,9 @@ public class Account {
     }
 
     public void setId(int id) {
-        this.id = id;
+        if (id>0 && id<100) {
+            this.id = id;
+        }
     }
 
     public String getName() {
@@ -34,7 +46,9 @@ public class Account {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (!name.isEmpty() && name.length()<100) {
+            this.name = name;
+        }   
     }
 
     public String getEmail() {
@@ -42,7 +56,9 @@ public class Account {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        if (email.endsWith("@gmail.com") || email.endsWith("@yahoo.com") && !email.isEmpty()) {
+            this.email = email;
+        }
     }
 
     public String getPhone() {
@@ -50,6 +66,10 @@ public class Account {
     }
 
     public void setPhone(String phone) {
-        this.phone = phone;
+        if (phone!=null) {
+            if (phone.length()<=10 && phone.length()>0 && phone.startsWith("0")) {
+                this.phone = phone;
+            }
+        }
     }
 }
