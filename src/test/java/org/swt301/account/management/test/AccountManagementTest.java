@@ -48,7 +48,7 @@ public class AccountManagementTest {
         accountManager.addAccount(account2);
         Account account3 = new Account(3, "John", "john@gmail.com", "0561827391");
         accountManager.addAccount(account3);
-        Assert.assertEquals(accountManager.deleteAccountByName("David"), true );
+        Assert.assertEquals(accountManager.deleteAccountByName("David"), true);
     }
 
     @Test
