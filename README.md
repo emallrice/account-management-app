@@ -29,7 +29,7 @@ public void addAccount(Account account) {
 
 ### Testing
 
-This application using TestNG testing framework for testing. Note that these tests do not use Selenium.
+This application using TestNG Test Case testing framework for Java Maven Application. Note that these tests do not use Selenium.
 
 ```java testAddAccount()
 @Test
