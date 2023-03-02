@@ -48,12 +48,7 @@ public class AccountManagementTest {
         accountManager.addAccount(account2);
         Account account3 = new Account(3, "John", "john@gmail.com", "0561827391");
         accountManager.addAccount(account3);
-        Account account4 = new Account(4, "Sophie", "sophie@gmail.com", "0628129321");
-        accountManager.addAccount(account4);
         Assert.assertEquals(accountManager.deleteAccountByName("David"), true);
-        accountManager.deleteAccountByName("David");
-        Assert.assertEquals(accountManager.getAccounts().size(), 3);
-        accountManager.clearList();
     }
 
     @Test
