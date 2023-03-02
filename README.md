@@ -1,4 +1,4 @@
-[![Demostration of Using CI with GitHub Actions, Maven and TestNG Test Case, no selenium  | © 2023 by Team 3 SWT301](https://github.com/maotou-spy/account-management-app/actions/workflows/account-management-app-ci.yml/badge.svg)](https://github.com/maotou-spy/account-management-app/actions/workflows/account-management-app-ci.yml)
+[![Demostration of Using CI with GitHub Actions, Maven and TestNG Test Case, no selenium | © 2023 by Team 3 SWT301](https://github.com/maotou-spy/account-management-app/actions/workflows/account-management-app-ci.yml/badge.svg)](https://github.com/maotou-spy/account-management-app/actions/workflows/account-management-app-ci.yml)
 
 # Welcome to Account Management App
 
