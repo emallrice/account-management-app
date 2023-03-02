@@ -60,11 +60,11 @@ public class AccountManagementTest {
 
     @Test
     public void testGetAllAccounts() {
-        Account account1 = new Account(1, "Alice", "alice@yahoo.com", "012345678");
-        Account account2 = new Account(3, "Bob", "bob@gmail.com", "098765432");
+        Account account1 = new Account(3, "Mary", "mary@yahoo.com", "012345678");
+        Account account2 = new Account(4, "Bob", "bob@gmail.com", "098765432");
         accountManager.addAccount(account1);
         accountManager.addAccount(account2);
-        Assert.assertEquals(accountManager.getAccounts().size(), 3);
+        Assert.assertEquals(accountManager.getAccounts().size(), 4);
     }
     
     //test model Account
@@ -77,7 +77,7 @@ public class AccountManagementTest {
         Assert.assertEquals(account1.getPhone(), "012345678");
     }  
     
-    //test phone number can not have length more than 10
+    //test phone number must be 10 degits
     @Test
     public void testTooLongPhoneNumber() {
         Account account1 = new Account(1, "Alice", "alice@yahoo.com", "012345678");
@@ -141,6 +141,11 @@ public class AccountManagementTest {
         Assert.assertEquals(account1.getId(), 1);
         account1.setId(15);
         Assert.assertEquals(account1.getId(), 15);
+    }
+    
+    @AfterTest
+    public void cleanup() {
+        // Code to cleanup resources after all test cases have run
     }
 }
 
