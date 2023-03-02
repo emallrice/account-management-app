@@ -146,6 +146,7 @@ public class AccountManagementTest {
     @AfterTest
     public void cleanup() {
         // Code to cleanup resources after all test cases have run
+        accountManager.clearList();
     }
 }
 
