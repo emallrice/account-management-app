@@ -24,6 +24,10 @@ public class AccountManagement {
             accounts.add(account);
         }
     }
+    
+    public void clearList() {
+        accounts.clear();
+    }
 
     public void updateAccount(Account account) {
         for (int i = 0; i < accounts.size(); i++) {
@@ -33,7 +37,17 @@ public class AccountManagement {
             }
         }
     }
-
+    
+    public boolean deleteAccountByName(String name) {
+        for (int i = 0; i < accounts.size(); i++) {
+            if (accounts.get(i).getName().equalsIgnoreCase(name)) {
+                accounts.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
+    
     public Account getAccountById(int id) {
         for (Account acc : accounts) {
             if (acc.getId() == id) {

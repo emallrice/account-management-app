@@ -4,6 +4,7 @@
  */
 package org.swt301.account.management.test;
 
+import java.util.ArrayList;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
@@ -36,6 +37,23 @@ public class AccountManagementTest {
         account.setEmail("alice@yahoo.com");
         accountManager.updateAccount(account);
         Assert.assertEquals(accountManager.getAccountById(1).getEmail(), "alice@yahoo.com");
+    }
+    
+    //test delete first account found by name in a list of accounts
+    @Test
+    public void testDeleteAccountByName() {
+        Account account1 = new Account(1, "Alice", "alice@gmail.com", "012345678");
+        accountManager.addAccount(account1);
+        Account account2 = new Account(2, "David", "david@gmail.com", "0726938172");
+        accountManager.addAccount(account2);
+        Account account3 = new Account(3, "John", "john@gmail.com", "0561827391");
+        accountManager.addAccount(account3);
+        Account account4 = new Account(4, "Sophie", "sophie@gmail.com", "0628129321");
+        accountManager.addAccount(account4);
+        Assert.assertEquals(accountManager.deleteAccountByName("David"), true);
+        accountManager.deleteAccountByName("David");
+        Assert.assertEquals(accountManager.getAccounts().size(), 3);
+        accountManager.clearList();
     }
 
     @Test
